@@ -1,0 +1,468 @@
+.zone {
+    /*padding:30px 50px;*/
+    /*cursor:pointer;*/
+    color:#FFF;
+    font-size:2em;
+    border-radius:4px;
+    /*border:1px solid #bbb;*/
+    transition: all 0.3s linear;
+}
+
+/***********************************************************************
+ *  Nav Bar
+ **********************************************************************/
+ .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 50px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin-left: auto;
+    padding-right: 100px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #045658; /* Dark greenish color */
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+/***********************************************************************
+ *  Cover
+ **********************************************************************/
+ .container {
+    height: 80vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./img/Background.png");
+    background-size: cover;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.orange_text {
+    font-size: 4.5rem;
+    color:#EF6101;
+    margin-bottom: 0;
+}
+
+.blue_text{
+    font-size: 2rem;
+    color:#045658;
+    font-size: 1.8rem;
+    line-height: 1.4; 
+    max-width: 80%; 
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: white;
+    color: #E86A1F;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+/***********************************************************************
+ *  Servicios - pagina principal
+ **********************************************************************/
+
+ .container-servicios {
+    height: 170vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 30vh; /* Space between squares */
+}
+
+.servicio {
+    width: 50vh;
+    height: 50vh;
+    background: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 20px;
+}
+
+.icono {
+    position: absolute;
+    top: -12vh; /* Moves it upwards */
+    background-color: #0E4D50;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.servicio p {
+    font-family: 'Nexa', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #045658;
+    margin-top: 150px; /* Adjusted for spacing below the icon */
+}
+
+/***********************************************************************
+ *  Banner Naranja
+ **********************************************************************/
+
+ .container-orange {
+    height: 40vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E86A1F;
+    background-size: cover;
+    text-align: center;
+    flex-direction: column;
+}
+
+.container-orange h1{
+    color: white;
+    font-family:'Gilroy-Heavy ☞';
+}
+
+.container-orange p{
+    color: white;
+    font-family:'Gilroy-Heavy ☞';
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+
+.text-container p {
+    font-size: 22px;
+    font-weight: bold;
+    width: 250px; /* Adjust width as needed */
+}
+
+.left {
+    text-align: left;
+    margin-right: 30px;
+}
+
+.right {
+    text-align: right;
+    margin-left: 30px;
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+}
+/***********************************************************************
+ *  Creativas
+ **********************************************************************/
+ .container-creativas1 {
+    height: 120vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    text-align: center;
+    background-image: url("./img/archivos\ pagina\ web-08.png");
+}
+
+.container-creativas1 h1{
+    color: #045658;
+    font-family:'Nexa';
+    margin-top: 150px;
+}
+
+.container-creativas2 {
+    height: 150vh; 
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    grid-template-rows: repeat(3, auto);
+    gap: 30px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    top: -10vh;
+}
+
+.container-creativas2 .center {
+    grid-column: 2 / 3; /* Centered in second column */
+    grid-row: 2 / 3; /* Middle row */
+}
+
+
+/***********************************************************************
+ *  Servicios main
+ **********************************************************************/
+.card {
+    width: 280px;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f4a261;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+}
+
+.icono2 {
+    position: absolute;
+    top: -12vh; /* Moves it upwards */
+    background-color: #E86A1F;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card h2 {
+    font-family: 'Nexa-bold', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #045658;
+    margin-top: 40px; /* Adjusted for spacing below the icon */
+}
+
+.card p {
+    font-family: 'Nexa', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #045658;
+    margin-top: 20; /* Adjusted for spacing below the icon */
+}
+
+.cta-button2 {
+    position: absolute;
+    bottom: -2vh; /* Moves it upwards */
+    background-color: #045658;
+    width: 30vh;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/***********************************************************************
+ *  Organización de eventos
+ **********************************************************************/
+ .container1 {
+    height: 120vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container1 h1{
+    color: #045658;
+    font-family:'Gilroy-Heavy ☞';
+    font-size: 70px;
+    margin-top: 0px;
+}
+
+.container1 h2{
+    color: #045658;
+    font-family:'Gilroy-Medium ☞';
+    font-size: 60px;
+    margin-top: 0;  
+    margin-bottom: 0; 
+}
+
+.container1 p{
+    color: #045658;
+    font-family:'Gilroy-Bold ☞';
+    font-size: 40px;
+    margin-top: 40px;  
+    margin-bottom: 0; 
+    text-align: justify;
+    text-justify: inter-word;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.container2 {
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container2 h2{
+    color: #045658;
+    font-family:'Gilroy-Medium ☞';
+    font-size: 40px;
+    margin-top: 0;  
+    margin-bottom: 0; 
+}
+
+.event-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.event-item {
+    text-align: center;
+    width: 200px;
+}
+.event-icon {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+.event-icon img {
+    width: 250px;
+    height: 250px;
+}
+.event-title {
+    color: #2c4b41;
+    font-weight: 'Gilroy-Bold ☞';
+    font-size: 20px;
+}
+/***********************************************************************
+ *  Footer
+ **********************************************************************/
+ .footer-container {
+    height: 40vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E86A1F;
+    background-size: cover;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+
+
+
+/***********************************************************************
+ *  Font File
+ **********************************************************************/
+ @font-face {
+    font-family: 'Nexa';
+    src: url('Recursos/font/Nexa/Nexa-Light.woff2') format('woff2'),
+        url('Recursos/font/Nexa/Nexa-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa-Bold';
+    src: url('Recursos/font/Nexa/Nexa-Bold.woff2') format('woff2'),
+        url('Recursos/font/Nexa/Nexa-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-Bold ☞'), url('Recursos/font/Gilroy/Gilroy-Bold.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Gilroy-Heavy ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-Heavy ☞'), url('Recursos/font/Gilroy/Gilroy-Heavy.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Gilroy-Light ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-Light ☞'), url('Recursos/font/Gilroy/Gilroy-Light.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Gilroy-Medium ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-Medium ☞'), url('Recursos/font/Gilroy/Gilroy-Medium.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Gilroy-Regular ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-Regular ☞'), url('Recursos/font/Gilroy/Gilroy-Regular.woff') format('woff');
+    }
