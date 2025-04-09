@@ -36,7 +36,7 @@
     padding: 30px 16px;
     color: #045658; 
     text-decoration: none;
-    font-size: max(20px, 2vw);
+    font-size: clamp(20px, 2vw, 999px);
     font-family: 'Nexa'; 
     font-weight: bold;
 }
@@ -138,7 +138,7 @@
 .container_cover h1 {
     margin-bottom: 0;
     font-family:'Gilroy-Heavy ☞';
-    font-size: max(40px, 6vw);
+    font-size: class(40px, 6vw, 999px);
 }
 
 .container_cover h3{
@@ -148,7 +148,7 @@
     margin-top: 0;
     font-family: 'Nexa'; 
     font-weight: bold;
-    font-size: max(17px, 1.7vw);
+    font-size: clamp(17px, 1.7vw, 999px);
 }
 
 @media (max-width: 768px){
@@ -301,13 +301,17 @@
 .container-orange p{
     color: white;
     font-family:'Gilroy-Heavy ☞';
-    font-size: max(14px, 1.7vw);
+    font-size: clamp(20px, 1.7vw, 999px);
 }
 
 .container-grid-item img{
     max-width: 70%;
     height: auto;
     display: block;
+}
+
+.container-orange h3 {
+    font-size: clamp(20px, 2.5vw, 999px);
 }
 
 @media screen and (max-width: 768px) {
@@ -342,6 +346,7 @@
     color: #045658;
     font-family:'Nexa';
     margin-top: 150px;
+    font-size: 10vw;
 }
 
 .container-creativas2 {
@@ -357,6 +362,20 @@
     grid-template-columns: auto auto;
     gap: 20vh;
     justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .container-grid-team {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20vh;
+    }
+
+    .container-creativas2 {
+        height: 200vh; 
+    }
+
+
 }
 
 .team-member{
@@ -405,19 +424,17 @@
 }
 
 .container-servicios {
-    height: 170vh; 
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    background-size: cover;
-    text-align: center;
+    gap: 10vh;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
 }
 
 .card {
     width: 90%; /* Makes it flexible */
-    max-width: 600px; /* Prevents it from getting too large */
-    height: 320px;
+    max-width: 40vw; /* Prevents it from getting too large */
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -429,6 +446,10 @@
     justify-content: center;
     position: relative;
     padding: 20px;
+    padding-top: 15vh;     /* space for the icon */
+    padding-bottom: 10vh;  /* space for the button */
+    height: 30vh;      /* or fixed height if needed */
+    margin-top: 13vh;
 }
 
 .icono2 {
@@ -442,11 +463,12 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    
 }
 
 .card h2 {
     font-family: 'Nexa-bold', sans-serif;
-    font-size: 30px;
+    font-size: clamp(20px, 2.3vw, 999px);
     font-weight: bold;
     color: #045658;
     margin-top: 40px; /* Adjusted for spacing below the icon */
@@ -454,10 +476,16 @@
 
 .card p {
     font-family: 'Nexa', sans-serif;
-    font-size: 20px;
+    font-size: clamp(14px, 1.5vw, 999px);
     font-weight: bold;
     color: #045658;
     margin-top: 20; /* Adjusted for spacing below the icon */
+}
+
+.icono2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .cta-button2 {
@@ -470,6 +498,63 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    font-size: clamp(12px, 1.2vw, 999px);
+}
+
+@media (max-width: 768px){
+    .container-servicios-cover{
+        align-items: start;
+        text-align: start;
+    }
+
+    .container-servicios {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 5vh;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 100%;
+        height: auto;
+        padding: 20px;
+        margin-bottom: 60px;
+    }
+
+    .icono2 {
+        width: 20vh;
+        height: 20vh;
+        top: -10vh;
+    }
+
+    .icono2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card h2 {
+        font-size: 5vw; /* Responsive font size */
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .card p {
+        font-size: 4vw;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .cta-button2 {
+        width: 70vw;
+        height: 6vh;
+        font-size: 4vw;
+        bottom: -2vh;
+    }
+
+
+
 }
 
 /***********************************************************************
@@ -529,38 +614,6 @@
     margin-top: 0;  
     margin-bottom: 50px; 
 }
-
-/*.event-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 100px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.event-item {
-    text-align: center;
-    width: 200px;
-}
-.event-icon {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 10px;
-}
-.event-icon img {
-    width: 250px;
-    height: 250px;
-}
-.event-title {
-    color: #2c4b41;
-    font-family: 'Gilroy-Bold ☞';
-    font-size: 20px;
-}*/
 
 .event-container {
     display: flex;
@@ -746,9 +799,7 @@ footer p {
 /***********************************************************************
  *  Text options
  **********************************************************************/
-h1 {
-    font-size: 4.5rem;
-}
+
 
 h3 {
     font-size: 2rem;
