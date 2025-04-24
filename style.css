@@ -155,12 +155,273 @@
 }
 
 /***********************************************************************
+ *  Servicios
+ **********************************************************************/
+
+ .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* max 2 columns */
+    gap: 2rem;
+    justify-items: center;
+    padding: 2rem;
+    margin-top: clamp(80px, 12vh, 160px);
+  }
+
+  .card {
+    width: 90%; /* Makes it flexible */
+    max-width: 40vw; /* Prevents it from getting too large */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f4a261;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+    height: auto; /* let content define height */
+    padding-top: clamp(40px, 19vh, 900px); /* dynamic space for icon */
+    padding-bottom: clamp(60px, 8vh, 100px); /* space for button if needed */
+    margin-bottom: clamp(60px, 10vh, 120px);
+    min-width: 300px;
+}
+
+.card-icon {
+    position: absolute;
+    top: -12vh; /* Moves it upwards */
+    background-color: #E86A1F;
+    width: 28vh;
+    height: 28vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .card-icon img {
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .card-container .blue_text{
+    font-family: 'Nexa-bold', sans-serif;
+    font-size: clamp(20px, 2.3vw, 999px);
+    font-weight: bold;
+    color: #045658;
+  }
+
+  .card-container p{
+    font-family: 'Nexa', sans-serif;
+    font-size: clamp(14px, 1.5vw, 999px);
+    font-weight: bold;
+    color: #045658;
+  }
+
+  @media (max-width: 768px) {
+    .card-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+/***********************************************************************
+ *  Servicios Texto
+ **********************************************************************/
+ .servicios_texto{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 3rem;
+ }
+
+ .servicios_texto h1{
+    color: #045658;
+    font-family:'Gilroy-Heavy ☞';
+    font-size: clamp(24px, 5vw, 999px);
+}
+
+.servicios_texto h2{
+    color: #045658;
+    font-family:'Gilroy-Medium ☞';
+    font-size: clamp(20px, 3vw, 999px);
+}
+
+.servicios_texto p{
+    color: #045658;
+    font-family:'Gilroy-Bold ☞';
+    font-size: clamp(14px, 2.2vw, 999px);
+    margin-top: 40px;  
+    margin-bottom: 0; 
+    text-align: justify;
+    text-justify: inter-word;
+    margin-right: 90px;
+    margin-left: 90px;
+}
+
+/***********************************************************************
+ *  Servicios Iconos
+ **********************************************************************/
+ .icon-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem clamp(1rem, 5vw, 4rem);
+  }
+  
+  .icon-card {
+    width: calc((100% - 4rem) / 3); 
+    max-width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icon-card img {
+    width: clamp(40px, 12vw, 999px);
+    height: auto;
+    margin-bottom: 0.8rem;
+  }
+  
+  .icon-card p {
+    font-family: 'Nexa-Bold', sans-serif;
+    font-size: clamp(14px, 1.5vw, 999px);
+    color: #045658;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .icon-card {
+      flex: 1 1 100%; /* each card takes full row */
+      max-width: 100%; /* prevents overflow */
+    }
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    }
+
+   .button-container .button{
+    font-size: clamp(10px, 2vw, 999px);
+    padding: 0.5em 0.5em;
+    }
+
+/***********************************************************************
+ *  Onboarding banner
+ **********************************************************************/
+ .highlight-banner {
+    border: 2px solid #e86a1f;    
+    border-radius: 40px;           
+    padding: 1.5rem 2rem;          
+    text-align: center;           
+    margin: 2rem auto;     
+    width: 60%;          
+  }
+  
+  .highlight-banner p {
+    font-family: 'Nexa-Bold', sans-serif;
+    font-weight: bold;
+    font-size: clamp(18px, 2.5vw, 28px);
+    color: #045658;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+/***********************************************************************
+ *  Galeria de imagenes horizontal
+ **********************************************************************/
+ .galeria-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 5%;
+  }
+  
+  .galeria-imagenes {
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .galeria-imagenes img {
+    height: 150px;
+    flex: 0 0 auto;
+    border-radius: 10px;
+    scroll-snap-align: center;
+    object-fit: cover;
+  }
+
+  .galeria-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  .galeria-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+/***********************************************************************
+ *  Nosotros
+ **********************************************************************/
+
+  .vision-mission-section {
+    padding: 2rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .intro-text {
+    font-size: 1rem;
+    color: #0E4D50;
+    margin-bottom: 2rem;
+  }
+  
+  .info-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  
+  .icon-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .label {
+    background-color: #0E4D50;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+/***********************************************************************
  *  Botones
  **********************************************************************/
  .button {
     display: inline-block;
-    margin-top: 2vh;
-    padding: 1em 2em;
+    margin: 1rem auto 0; 
+    padding: 1em 1em;
     font-size: clamp(10px, 1.3vw, 999px);
     font-weight: bold;
     border-radius: 50px;
@@ -187,6 +448,8 @@
     background: #E86A1F;
     color: white;
 }
+
+  
 
 /***********************************************************************
  *  Text Colors
