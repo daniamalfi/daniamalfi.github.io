@@ -299,6 +299,61 @@
         font-size: 30px;
       }
   }
+
+  /***********************************************************************
+ *  Index-Team Members
+ **********************************************************************/
+
+ .team-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 3%;
+  margin-top: -10%;
+}
+
+.team-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  gap: 1vw;
+}
+
+.team-member {
+  text-align: center;
+  font-family: 'Nexa';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.team-member img {
+  width: 18vw;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+
+.team-member span {
+  display: block;
+  color: #0E4D50;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .team-row {
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
+  }
+
+  .team-member img {
+    width: 150px; 
+  }
+}
+  
 /***********************************************************************
  *  Servicios Texto
  **********************************************************************/
@@ -372,12 +427,27 @@
       flex: 1 1 100%; /* each card takes full row */
       max-width: 100%; /* prevents overflow */
     }
-  }
+
+    .icon-card img {
+      width: clamp(50px, 20vw, 100px); /* force actual width */
+      height: auto;
+      max-width: none; /* disable any previous max-width */
+    }
+
+    .button-container .button{
+      font-size: clamp(20px, 10vw, 999px);
+      padding: 0.5em 0.5em;
+      }
+    }
+    
+
+    
 
   .button-container {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     }
 
    .button-container .button{
@@ -502,6 +572,40 @@
     text-align: justify;
   }
   
+  @media (max-width: 768px) {
+    .info-block {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 2rem 1rem;
+      gap: 1rem;
+    }
+  
+    .icon-label {
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+  
+    .icon {
+      width: 30vw;
+      margin-bottom: 0.5rem;
+    }
+  
+    .label {
+      font-size: 1.2rem;
+      padding: 6px 16px;
+    }
+  
+    .blue_text {
+      font-size: 1rem;
+      text-align: justify;
+    }
+  
+    .vision-mission-section h3.intro-text {
+      font-size: 1rem;
+      text-align: justify;
+    }
+  }
 /***********************************************************************
  *  Contacto
  **********************************************************************/
@@ -548,6 +652,7 @@
   gap: 1rem;
   align-items: center;
 }
+
 
 .form-row {
   display: flex;
@@ -608,6 +713,90 @@ input, textarea {
   }
   .form-group {
     width: 90%;
+  }
+}
+
+/***********************************************************************
+ *  Footer
+ **********************************************************************/
+ .site-footer {
+  background-color: #e86a1f;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Nexa', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer-logo img {
+  height: 9vw;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: clamp(20px, 1.8vw, 999px);;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  margin: 10px 0;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.footer-social img {
+  height: 4vw;
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .footer-social img {
+    height: 30px; /* or 6vw if you prefer relative size */
+  }
+
+  .footer-logo img {
+    height: 40px; /* or smaller if needed */
+  }
+
+  .site-footer {
+    padding: 30px 10px;
   }
 }
   
