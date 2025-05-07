@@ -429,15 +429,20 @@
     }
 
     .icon-card img {
-      width: clamp(50px, 20vw, 100px); /* force actual width */
+      width: clamp(50px, 25vw, 999px); /* force actual width */
       height: auto;
       max-width: none; /* disable any previous max-width */
     }
 
-    .button-container .button{
-      font-size: clamp(20px, 10vw, 999px);
-      padding: 0.5em 0.5em;
-      }
+    .servicios_texto p{
+        font-size: 20px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .icon-card p {
+      font-size: 20px;
+    }
     }
     
 
@@ -451,8 +456,8 @@
     }
 
    .button-container .button{
-    font-size: clamp(10px, 2vw, 999px);
-    padding: 0.5em 0.5em;
+    font-size: clamp(14px, 4vw, 20px); 
+    padding: 0.8em 2em;
     }
 
 /***********************************************************************
